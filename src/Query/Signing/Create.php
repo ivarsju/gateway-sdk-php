@@ -200,6 +200,10 @@ class Create implements QueryInterface
                                 'choices' => SigningPurposeProvider::getAllSigningPurposes(),
                             ]),
                         ]),
+                        'signing_options' => new Assert\Optional([
+                            new Assert\Type('array'),
+                            new Assert\Count(['min' => 1]),
+                        ]),
                         $this->type => new Assert\Optional(),
                     ]),
                 ]),
